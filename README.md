@@ -1,4 +1,9 @@
 # FinderLocals-Backend
-Members: Víctor, Ayose and Jhonathan
+Members: Víctor, Ayoze and Jhonathan
 
-The backend will contain (for now) a database to manage the content of the differets locals, a login (it's necessary) and a bot to help the costumers how to publish. 
+# Database
+Save and retrieve data from locals.
+Manage user data (login, password, last-login...).
+
+# Bot
+A bot searching new locals to add them to the Database.
