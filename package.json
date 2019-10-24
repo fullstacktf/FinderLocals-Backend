@@ -15,7 +15,7 @@
     "bugs": {
         "url": "https://github.com/raulanatol/node-js-server/issues"
     },
-    "homepage": "https://github.com/raulanatol/node-js-server#readme",
+    "homepage": "https://github.com/fullstacktf/FinderLocals-Backend#readme",
     "dependencies": {
         "express": "^4.16.4"
     }
