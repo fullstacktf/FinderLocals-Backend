@@ -13,7 +13,7 @@
     "author": "raulanatol",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/raulanatol/node-js-server/issues"
+        "url": "https://github.com/fullstacktf/FinderLocals-Backend/issues"
     },
     "homepage": "https://github.com/fullstacktf/FinderLocals-Backend#readme",
     "dependencies": {
