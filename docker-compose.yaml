@@ -1,3 +1,20 @@
 version: ‘3.1’
 services:
   db:
+    image: mariadb:10.318-bionic
+    - dbdata:/var/lib/
+  restart: always
+  environment:
+    - MONGO_INITDB_DATABASE: mariadb
+    - MONGO_INITDB_ROOT_USERNAME: mariadb
+    - MONGO_INITDB_ROOT_PASSWORD: mariadb
+  node:
+    depends_on:
+      -db
+    image: mhart/alpine-node:13.0
+    ports:
+      - 8000:80
+    restart: always
+    volumnes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
