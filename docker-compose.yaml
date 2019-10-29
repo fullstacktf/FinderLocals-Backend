@@ -5,9 +5,10 @@ services:
     - dbdata:/var/lib/mariadb 
   restart: always
   environment:
-    - MONGO_INITDB_DATABASE: mariadb
-    - MONGO_INITDB_ROOT_USERNAME: mariadb
-    - MONGO_INITDB_ROOT_PASSWORD: mariadb
+    MYSQL_ROOT_PASSWORD: : mariadb
+    MYSQL_DATABASE: mariadb
+    MYSQL_USER: mariadb
+    MYSQL_PASSWORD: mariadb
   node:
     depends_on:
       -db
@@ -19,11 +20,11 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
   nginx:
-    image: alpine
+    image: nginx:1.17.5-alpine
     ports:
       - 8000:80
     restart: always
     volumes: 
-      - /usr/nginx
+      - /usr/share/nginx/html
 volumes:
-  dbdata:
+dbdata:
