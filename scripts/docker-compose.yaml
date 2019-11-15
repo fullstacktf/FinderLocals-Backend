@@ -5,10 +5,9 @@ services:
     - dbdata:/var/lib/mongodb 
   restart: always
   environment:
-    MYSQL_ROOT_PASSWORD: : mongodb
-    MYSQL_DATABASE: mongodb
-    MYSQL_USER: mongodb
-    MYSQL_PASSWORD: mongodb
+    - MONGO_INITDB_DATABASE: : mongodb
+    - MONGO_INITDB_ROOT_USERNAME: mongodb
+    - MONGO_INITDB_ROOT_PASSWORD: mongodb
   node:
     depends_on:
       -db
