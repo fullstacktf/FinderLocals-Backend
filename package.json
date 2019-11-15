@@ -1,22 +1,30 @@
 {
-    "name": "nodejs",
+    "name": "finderlocals",
     "version": "1.0.0",
-    "description": "A simple nodejs server",
+    "description": "Backend of the project",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fullstacktf/FinderLocals-Backend.git" 
+        "url": "git+https://github.com/fullstacktf/FinderLocals-Backend.git"
     },
-    "author": "raulanatol",
+    "keywords": [],
+    "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/fullstacktf/FinderLocals-Backend/issues"
+    "devDependencies": {
+        "@types/mongodb": "^3.3.10",
+        "demon": "^1.4.4",
+        "jest": "^24.9.0",
+        "nodemon": "^1.19.4",
+        "typescript": "^3.7.2"
     },
-    "homepage": "https://github.com/fullstacktf/FinderLocals-Backend#readme",
     "dependencies": {
-        "express": "^4.16.4"
+        "express": "^4.17.1",
+        "express-session": "^1.17.0",
+        "mongodb": "^3.3.4",
+        "mongoose": "^5.7.11",
+        "morgan": "^1.9.1"
     }
 }
