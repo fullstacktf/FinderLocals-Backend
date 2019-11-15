@@ -1,3 +1,3 @@
-FROM mariadb:10.318-bionic
+FROM mongo:3.4.23-xenial
 EXPOSE 37017
 
