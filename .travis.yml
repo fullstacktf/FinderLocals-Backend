@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- 7
+branches:
+  only:
+  - digitalocean
+env:
+  global:
+  - REMOTE_PATH=deploy
+  - REMOTE_USER=deployment
+  - REMOTE_HOST=finderlocals.digital
+before_install:
+- openssl aes-256-cbc -K $encrypted_46ddb366c807_key -iv $encrypted_46ddb366c807_iv
+  -in sshTravis.enc -out sshTravis -d
+- eval "$(ssh-agent -s)"
+- chmod 600 sshTravis
+- ssh-add sshTravis
+after_success:
+- ssh -o StrictHostKeyChecking=no -i deployment@finderlocals.digital ls
