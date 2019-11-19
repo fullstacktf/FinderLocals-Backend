@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 let controller = require('./controller');
 
-router.get('/prueba', (req, res) => {  
+router.get('/prueba', (req, res) => {
     if (req.session.views) {
         let x = req.session.views++;
         console.log(x);
@@ -15,5 +15,9 @@ router.get('/prueba', (req, res) => {
 
 router.post('/create', (req, res) => res.json(controller.createLocals(req.body)));
 
+function sum(a, b) {
+    return a + b;
+}
+module.exports = sum;
 
 module.exports = router;

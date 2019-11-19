@@ -7,7 +7,7 @@
 //PRIMERA PRUEBA: usando por defecto datos de locales. 
 const locals = [{ name: 'Local Alfonso', id: 1, location: "C/ Teresa de los campos" }, { name: 'Local Gigants', id: 2, location: "C/ Pedro de Alonso" }];
 
-function getLocals(){
+function getLocals() {
     return locals;
 }
 
@@ -17,5 +17,8 @@ function createLocals(newLocal) {
     locals.push(newLocal);
     return locals;
 }
+function sum(a, b) {
+    return a + b;
+}
 
-module.exports = { getLocals, createLocals};
+module.exports = { getLocals, createLocals, sum };
