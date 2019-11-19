@@ -13,12 +13,10 @@ function getLocals() {
 
 function createLocals(newLocal) {
     newLocal.id = locals[locals.length - 1].id + 1;
-    newLocal.likes = 0;
+    //newLocal.likes = 0;
     locals.push(newLocal);
-    return locals;
-}
-function sum(a, b) {
-    return a + b;
+    // return locals;
+    return newLocal
 }
 
-module.exports = { getLocals, createLocals, sum };
+module.exports = { getLocals, createLocals };

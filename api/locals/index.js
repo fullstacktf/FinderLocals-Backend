@@ -15,9 +15,6 @@ router.get('/prueba', (req, res) => {
 
 router.post('/create', (req, res) => res.json(controller.createLocals(req.body)));
 
-function sum(a, b) {
-    return a + b;
-}
-module.exports = sum;
+
 
 module.exports = router;
