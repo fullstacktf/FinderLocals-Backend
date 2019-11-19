@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "jest",
+        "test": "echo hola",
         "dev": " NODE_ENV=development nodemon server.js"
     },
     "repository": {
