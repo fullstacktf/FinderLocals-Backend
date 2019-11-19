@@ -16,6 +16,5 @@ before_install:
 - chmod 600 sshTravis
 - ssh-add sshTravis
 after_success:
-- cd /home/deployment/deploy && git pull
-- ssh -o StrictHostKeyChecking=no -i deployment@finderlocals.digital ls
-- ls
+- ssh -o StrictHostKeyChecking=no -i deployment@finderlocals.digital cd /home/deployment/deploy/FinderLocals-Backend && git pull
+
