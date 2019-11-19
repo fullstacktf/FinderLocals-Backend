@@ -13,4 +13,7 @@ router.get('/prueba', (req, res) => {
     }
 });
 
+router.post('/create', (req, res) => res.json(controller.createLocals(req.body)));
+
+
 module.exports = router;

@@ -11,4 +11,11 @@ function getLocals(){
     return locals;
 }
 
-module.exports = { getLocals};
+function createLocals(newLocal) {
+    newLocal.id = locals[locals.length - 1].id + 1;
+    newLocal.likes = 0;
+    locals.push(newLocal);
+    return locals;
+}
+
+module.exports = { getLocals, createLocals};
