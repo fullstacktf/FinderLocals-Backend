@@ -6,7 +6,7 @@ branches:
   - digitalocean
 env:
   global:
-  - REMOTE_PATH=deploy
+  - REMOTE_PATH=/home/deployment/deploy/FinderLocals-Backend
   - REMOTE_USER=deployment
   - REMOTE_HOST=142.93.171.171
 before_install:
