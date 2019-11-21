@@ -16,4 +16,4 @@ before_install:
 - chmod 600 sshTravis
 - ssh-add sshTravis
 after_success:
-- ssh -o StrictHostKeyChecking=no -i sshTravis -v deployment@finderlocals.digital  cd /home/deployment/deploy/FinderLocals-Backend && git checkout digitalocean && git pull  
+- bash scripts/deploy.sh
