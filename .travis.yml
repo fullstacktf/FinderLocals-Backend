@@ -8,7 +8,7 @@ env:
   global:
   - REMOTE_PATH=deploy
   - REMOTE_USER=deployment
-  - REMOTE_HOST=finderlocals.digital
+  - REMOTE_HOST=142.93.171.171
 before_install:
 - openssl aes-256-cbc -K $encrypted_46ddb366c807_key -iv $encrypted_46ddb366c807_iv
   -in sshTravis.enc -out sshTravis -d
