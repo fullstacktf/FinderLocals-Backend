@@ -1,4 +1,4 @@
-echo "Deploying on digitalocean"
+echo "Deploying on digitalocean"  
 
 COMMAND="cd ${REMOTE_PATH} && git branch && git status && git checkout digitalocean && git pull"
 
