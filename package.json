@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node server.js",
         "test": "jest",
-        "dev": " NODE_ENV=development nodemon server.js"
+        "dev": " NODE_ENV=development nodemon server.js",
+        "new-dev": "NODE_ENV=development ts-node server.ts"
     },
     "repository": {
         "type": "git",
