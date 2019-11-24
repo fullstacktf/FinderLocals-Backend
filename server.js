@@ -6,7 +6,7 @@ const notifier = require('node-notifier');
 const session = require('express-session'); 
 const rateLimit = require("express-rate-limit");
 const app = express();
-const localsRouter = require('./api/locals');
+const localsRouter = require('./src/api/locals');
 const apiLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 5, 
