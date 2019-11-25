@@ -22,10 +22,11 @@
         "@typescript-eslint/eslint-plugin": "^2.8.0",
         "@typescript-eslint/parser": "^2.8.0",
         "demon": "^1.4.4",
+        "eslint": "^6.6.0",
         "jest": "^24.9.0",
         "nodemon": "^1.19.4",
+        "prettier": "^1.19.1",
         "ts-node": "^6.0.3",
-        "eslint": "^6.6.0",
         "typescript": "^3.7.2"
     },
     "dependencies": {
