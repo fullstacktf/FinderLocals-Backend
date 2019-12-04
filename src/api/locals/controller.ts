@@ -6,16 +6,16 @@ const locals = [
 ];
 import { MongoClient, Server, ObjectId } from "mongodb";
 import { type } from "os";
-
-const MONGO_URL = "mongodb://localhost:27017"; //esto depende
+//mongodb://localhost:27017
+const MONGO_URL = "mongodb://142.93.171.171:27017"; //esto depende
 
 export function getLocals() {
   return new Promise((resolve, reject) => {
     MongoClient.connect(MONGO_URL, (err, client) => {
       if (!err) {
-        const db = client.db("locals"); //esto depende de la creación
-        const moviesCollection = db.collection("locals");
-        moviesCollection
+        const db = client.db("finderlocals"); //esto depende de la creación
+        const localssCollection = db.collection("locals");
+        localssCollection
           .find({})
           .limit(20)
           .toArray()
