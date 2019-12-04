@@ -13,7 +13,7 @@ router.get("/prueba", (req, res) => {
   }
 });
 
-router.get("/locals", (req, res) => {
+router.get("/mongolocals", (req, res) => {
   getLocals()
     .then(locals => res.json(locals))
     .catch(err => res.status(500).send(err));

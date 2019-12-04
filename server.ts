@@ -34,4 +34,4 @@ if (process.env.NODE_ENV === "development") {
   app.use(methodOverride());
   app.use(errorHandler);
 }
-app.listen(8080, () => console.log("Ready on port 3000!"));
+app.listen(8080, () => console.log("Ready on port 8080!"));

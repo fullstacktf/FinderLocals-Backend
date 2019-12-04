@@ -1,4 +1,5 @@
-/**/ 
+/**/
+
 const locals = [
   { name: "Local Alfonso", id: 1, location: "C/ Teresa de los campos" },
   { name: "Local Gigants", id: 2, location: "C/ Pedro de Alonso" }
