@@ -3,18 +3,26 @@ import * as morgan from "morgan";
 import * as compression from "compression";
 import * as methodOverride from "method-override";
 import * as notifier from "node-notifier";
-import * as session from "express-session";
+//import * as session from "express-session";
 import * as rateLimit from "express-rate-limit";
 import * as localsRouter from "./src/api/locals";
+import * as cors from "cors";
+const cors = require("cors");
 const app = express();
+const corsOptions = {
+  origin: "http://localhost:3000"
+};
+
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5,
+  max: 20,
   message: "Too many requests,  please try again after 15 min"
 });
+
+app.use(cors(corsOptions));
 app.use(apiLimiter);
 app.use(express.json());
-app.use(session({ secret: "1234" }));
+//app.use(session({ secret: "1234" }));
 app.use(morgan("combined"));
 app.use(compression());
 app.use("/locals", localsRouter);
