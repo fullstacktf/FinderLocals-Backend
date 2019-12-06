@@ -12,12 +12,27 @@ const app = express();
 const corsOptions = {
   origin: "http://localhost:3000"
 };
+const slack =
+  "https://hooks.slack.com/services/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";
 
 const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 20,
   message: "Too many requests,  please try again after 15 min"
 });
+
+function errorSlack(err, req, res, next) {
+  if (!err) {
+    return next();
+  }
+  const errorSlack = { text: `Error in ${req.method} ${req.url}` };
+  req
+    .post(slack)
+    .send(errorSlack)
+    .end(err => {
+      next(err);
+    });
+}
 
 app.use(cors(corsOptions));
 app.use(apiLimiter);
@@ -41,5 +56,7 @@ function errorHandler(err, req, res, next) {
 if (process.env.NODE_ENV === "development") {
   app.use(methodOverride());
   app.use(errorHandler);
+
+  app.use(errorSlack);
 }
 app.listen(8080, () => console.log("Ready on port 8080!"));
