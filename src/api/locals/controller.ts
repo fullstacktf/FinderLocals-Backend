@@ -1,7 +1,7 @@
-const locals = [
-  { name: "Local Alfonso", id: 1, location: "C/ Teresa de los campos" },
-  { name: "Local Gigants", id: 2, location: "C/ Pedro de Alonso" }
-];
+// const locals = [
+//   { name: "Local Alfonso", id: 1, location: "C/ Teresa de los campos" },
+//   { name: "Local Gigants", id: 2, location: "C/ Pedro de Alonso" }
+// ];
 import { MongoClient, Server, ObjectId } from "mongodb";
 
 const MONGO_URL = "mongodb://142.93.171.171:27017"; //esto depende

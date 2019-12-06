@@ -2,17 +2,6 @@ import * as express from "express";
 import { getLocals, createLocals } from "./controller";
 const router = express.Router();
 
-router.get("/prueba", (req, res) => {
-  if (req.session.views) {
-    let x = req.session.views++;
-    console.log(x);
-    res.json(getLocals());
-  } else {
-    req.session.views = 1;
-    res.json(getLocals());
-  }
-});
-
 router.get("/mongolocals", (req, res) => {
   getLocals()
     .then(locals => res.json(locals))
