@@ -34,7 +34,7 @@ export function createLocals(newLocal) {
     };
     MongoClient.connect(MONGO_URL, (err, client) => {
       if (!err) {
-        const db = client.db("locals");
+        const db = client.db("finderlocals");
         const localssCollection = db.collection("locals");
         localssCollection
           .insertOne(localToInsert)
