@@ -5,7 +5,7 @@ services:
     - dbdata:/var/lib/mongodb 
   restart: always
   environment:
-    - MONGO_INITDB_DATABASE: : mongodb
+    - MONGO_INITDB_DATABASE: mongodb
     - MONGO_INITDB_ROOT_USERNAME: mongodb
     - MONGO_INITDB_ROOT_PASSWORD: mongodb
   node:
