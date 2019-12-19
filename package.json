@@ -1,7 +1,7 @@
 {
   "name": "finderlocals",
   "version": "1.0.0",
-  "description": "Backend of the project!",
+  "description": "Backend of the project!!",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
